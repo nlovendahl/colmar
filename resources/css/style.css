@@ -1,10 +1,83 @@
+/*General Rules & Fonts*/
+
 html {
-  font-familiy: "Roboto", sans-serif;
+  font-family: 'Poppins', 'Arial', sans-serif;
   font-size: 16px;
+  color: rgba(105, 105, 105, 1);
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v5/HUuNgGR31mqIHE6zs0BlBgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v5/57TQ-anwthzkETEIO4jESAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
 div {
   display: block;
+}
+
+h1, h2, h3, span.bold {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.left img {
+  width: 60%;
+  height: 100%;
+}
+
+/*Header & Nav Rules*/
+
+header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(105, 105, 105, 1);
 }
 
 .site-container {
@@ -23,14 +96,15 @@ header .flex-container {
   justify-content: space-around;
 }
 
-#nav span {
+#nav li {
   padding-left: 1rem;
 }
 
 #top-logo span {
   display: inline-block;
   margin: 0;
-  font-family: "Roboto";
+  font-size: 1.1rem;
+  font-family: 'Roboto', 'Arial', sans-serif;
   text-transform: uppercase;
   height: 2rem;
 }
@@ -38,4 +112,27 @@ header .flex-container {
 #top-logo img {
   height: 3rem;
   vertical-align: middle;
+}
+
+/*Banner*/
+
+#banner {
+  position: relative;
+  top: 4rem;
+  background-color: rgba(60, 60, 60, 0.3);
+  padding: 2rem 0;
+}
+
+#banner-text {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  line-height: 1.5;
+}
+
+#button {
+  padding: .5rem;
+  text-align: center;
+  background-color: rgba(60, 60, 60, 0.5)
 }
