@@ -129,15 +129,12 @@ header .flex-container {
 
 /*Banner*/
 
-.banner .flex-container {
-  background-color: rgba(60, 60, 60, 0.3);
-}
-
 .banner {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-size: contain;
+  background-color: rgba(60, 60, 60, 0.3);
 }
 
 /*Main Left*/
@@ -163,6 +160,7 @@ header .flex-container {
 .flex-container.right {
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   float: right;
   width: 40%;
   height: 100%;
@@ -172,7 +170,7 @@ header .flex-container {
   background-color: rgba(60, 60, 60, 0.8);
   color: white;
   text-align: center;
-  padding: .5rem 1rem;
+  padding: .5rem 2.5rem;
 }
 
 .img-box {
