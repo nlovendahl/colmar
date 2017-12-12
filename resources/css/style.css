@@ -127,15 +127,24 @@ header .flex-container {
   vertical-align: middle;
 }
 
+/*Banner*/
+
+.banner .flex-container {
+  background-color: rgba(60, 60, 60, 0.3);
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+}
+
 /*Main Left*/
 
 #main {
   position: relative;
   top: 4rem;
-}
-
-.banner {
-  background-color: rgba(60, 60, 60, 0.3);
 }
 
 .left img {
