@@ -83,6 +83,11 @@ p {
   margin: .5rem 0;
 }
 
+video {
+  width: 100%;
+  height: 100%;
+}
+
 /*Header & Nav Rules*/
 
 header {
@@ -197,6 +202,10 @@ header .flex-container {
   padding: 1rem;
 }
 
+.img-box.gray {
+  background-color: rgba(60, 60, 60, 0.2);
+}
+
 .caption-box a {
   color: rgba(32, 178, 170, 1);
 }
@@ -206,12 +215,11 @@ header .flex-container {
 #courses {
   display: inline-block;
   background-color: rgba(60, 60, 60, 0.2);
-  position: relative;
-  top: 4rem;
 }
 
-#courses h2 {
-  padding: 2rem 0;
+h2.center {
+  display: inline-block;
+  padding: 2rem 0 0 0;
   text-align: center;
   width: 100%;
 }
@@ -221,12 +229,13 @@ header .flex-container {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 1rem 4rem;
 }
 
 .class-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   background-color: white;
   margin: 1rem .5rem;
@@ -244,4 +253,10 @@ header .flex-container {
 
 .caption-box span {
   text-transform: uppercase;
+}
+
+/*Thesis*/
+
+#thesis {
+  display: inline-block;
 }
