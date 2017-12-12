@@ -77,11 +77,6 @@ h2 {
   margin: 0 auto;
 }
 
-.left img {
-  width: 60%;
-  height: 100%;
-}
-
 /*Header & Nav Rules*/
 
 header {
@@ -131,50 +126,32 @@ header .flex-container {
   vertical-align: middle;
 }
 
-/*Banner*/
+/*Main Left*/
 
-#banner, #info {
+#main {
   position: relative;
   top: 4rem;
   padding: 2rem 0;
 }
 
-#banner {
+.banner {
   background-color: rgba(60, 60, 60, 0.3);
+  background-size: auto;
 }
 
-#banner-text {
-  display: inline-flex;
+.left img {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.flex-container.left {
   flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  width: 35%;
-}
-
-#banner-text h3 {
-  margin: .75rem 0;
-}
-
-#button {
-  padding: .5rem;
-  text-align: center;
-  background-color: rgba(60, 60, 60, 0.9)
-}
-
-#button span a {
-  font-weight: 200;
-  color: white;
-}
-
-/*Info*/
-
-#info-text {
-  margin-top: 1.5rem;
-  width: 60%;
   float: left;
+  width: 60%;
+  height: 100%;
 }
 
-/*Orientation*/
+/*Main Right*/
 
 .flex-container.right {
   flex-direction: column;
@@ -186,6 +163,7 @@ header .flex-container {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 }
 
 .img-box img {
