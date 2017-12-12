@@ -70,12 +70,17 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.55rem;
 }
 
 .flex-container {
   display: flex;
   margin: 0 auto;
+}
+
+p {
+  font-size: 0.9rem;
+  margin: .5rem 0;
 }
 
 /*Header & Nav Rules*/
@@ -129,7 +134,7 @@ header .flex-container {
 
 /*Banner*/
 
-.banner {
+#banner {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -146,13 +151,17 @@ header .flex-container {
 
 .left img {
   width: 100%;
-  padding: 2rem 0;
 }
 
 .flex-container.left {
   flex-direction: column;
   float: left;
   width: 60%;
+  padding: 2rem 0;
+}
+
+#quote {
+  font-size: .75rem;
 }
 
 /*Main Right*/
@@ -164,6 +173,7 @@ header .flex-container {
   float: right;
   width: 40%;
   height: 100%;
+  padding: 1rem 0;
 }
 
 #button {
@@ -178,6 +188,7 @@ header .flex-container {
   flex-direction: row;
   align-items: center;
   width: 100%;
+  border: .5px solid rgba(60, 60, 60, 0.2);
 }
 
 .img-box img {
@@ -186,8 +197,51 @@ header .flex-container {
   padding: 1rem;
 }
 
+.caption-box a {
+  color: rgba(32, 178, 170, 1);
+}
+
 /*Courses*/
 
 #courses {
   display: inline-block;
+  background-color: rgba(60, 60, 60, 0.2);
+  position: relative;
+  top: 4rem;
+}
+
+#courses h2 {
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.flex-container.center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.class-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 1rem .5rem;
+  width: 30%;
+}
+
+.class-box img {
+  width: 100%;
+  height: auto;
+}
+
+.class-box .caption-box {
+  padding: 1rem 0 1.5rem 1rem;
+}
+
+.caption-box span {
+  text-transform: uppercase;
 }
