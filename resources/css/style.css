@@ -1,3 +1,41 @@
 html {
+  font-familiy: "Roboto", sans-serif;
+  font-size: 16px;
+}
 
+div {
+  display: block;
+}
+
+.site-container {
+  margin: 0 1.5rem;
+}
+
+header .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+#nav {
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+#nav span {
+  padding-left: 1rem;
+}
+
+#top-logo span {
+  display: inline-block;
+  margin: 0;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  height: 2rem;
+}
+
+#top-logo img {
+  height: 3rem;
+  vertical-align: middle;
 }
