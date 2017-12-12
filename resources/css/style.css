@@ -62,6 +62,7 @@ h1, h2, h3, span.bold {
   font-weight: 700;
   padding: .5rem 0;
   line-height: 1.4;
+  vertical-align: middle;
 }
 
 h1 {
@@ -131,12 +132,10 @@ header .flex-container {
 #main {
   position: relative;
   top: 4rem;
-  padding: 2rem 0;
 }
 
 .banner {
   background-color: rgba(60, 60, 60, 0.3);
-  background-size: auto;
 }
 
 .left img {
@@ -148,15 +147,23 @@ header .flex-container {
   flex-direction: column;
   float: left;
   width: 60%;
-  height: 100%;
 }
 
 /*Main Right*/
 
 .flex-container.right {
   flex-direction: column;
+  justify-content: center;
   float: right;
   width: 40%;
+  height: 100%;
+}
+
+#button {
+  background-color: rgba(60, 60, 60, 0.8);
+  color: white;
+  text-align: center;
+  padding: .5rem 1rem;
 }
 
 .img-box {
@@ -170,4 +177,10 @@ header .flex-container {
   width: 35%;
   height: 100%;
   padding: 1rem;
+}
+
+/*Courses*/
+
+#courses {
+  display: inline-block;
 }
