@@ -52,13 +52,6 @@ div {
   display: block;
 }
 
-h1, h2, h3, span.bold {
-  font-weight: 700;
-  padding: .5rem 0;
-  line-height: 1.6;
-  vertical-align: middle;
-}
-
 h1 {
   font-size: 2rem;
 }
@@ -88,20 +81,209 @@ span {
 
 /*Media Queries*/
 
-@media only screen and (min-width: 480px); {
+@media screen and (max-width: 480px) {
 
-  .mobile {
+  .desktop {
+    display: none;
+  }
+
+  .site-container {
+    margin: 0 1rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .banner .mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(60, 60, 60, 0.3);
+  }
+
+  h1, h3, span.bold {
+    font-weight: 700;
+    padding: 1rem 0;
+    line-height: 1.4;
+    vertical-align: middle;
+  }
+
+  h2 {
+    font-weight: 700;
+    padding: 2rem 0 1rem 0;
+    line-height: 1.4;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+
+  .flex-container.right, .flex-container.left {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+  }
+
+  #info .flex-container.left {
+    display: none;
+  }
+
+  .img-box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+
+  .img-box:last-child {
+    padding-bottom: 2rem;
+  }
+
+  .img-box img {
+    width: 100%;
+    height: 100%;
+    padding-top: 1rem;
+  }
+
+  .flex-container.center {
+    flex-direction: column;
+  }
+
+  .class-box {
+    width: 100%;
+    margin: .25rem 0;
+  }
+
+  .class-box img, .caption-box span, .caption-box p {
+    display: none;
+  }
+
+  #courses .caption-box {
+    background-color: rgba(60, 60, 60, 0.3);
+    width: 100%;
+  }
+
+  .class-box h3 {
+    padding-left: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  #thesis .flex-container.right, #thesis h3 , #thesis p {
+    display: none;
+  }
+
+  #thesis .site-container {
+    margin: 0 auto;
+  }
+
+  footer span {
+    margin-top: .5rem;
+    padding: 1rem 0;
+  }
+
+  #footer-right {
     display: none;
   }
 }
 
-@media only screen and (max-width: 480px); {
+@media screen and (min-width: 480px) {
 
- .flex-container.left, .flex-container.right {
-   width: 100%;
- }
+  .mobile, .banner.mobile, .info.mobile {
+    display: none;
+  }
+
+  .site-container {
+    margin: 0 1.5rem;
+  }
+
+  h1, h2, h3, span.bold {
+    font-weight: 700;
+    padding: .5rem 0;
+    line-height: 1.6;
+    vertical-align: middle;
+  }
+
+  .flex-container.left {
+    flex-direction: column;
+    float: left;
+    width: 60%;
+    padding: 2rem 0;
+  }
+
+  .banner, .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-container.right {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    float: right;
+    width: 40%;
+    height: 100%;
+    padding: 2rem 0;
+    border-left: .5px solid rgba(60, 60, 60, 0.2);
+  }
+
+  .img-box {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-left: .5px solid rgba(60, 60, 60, 0.2);
+  }
+
+  .img-box img {
+    width: 35%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  .img-box.gray {
+    background-color: rgba(60, 60, 60, 0.2);
+  }
+
+  #courses {
+    display: inline-block;
+    background-color: rgba(60, 60, 60, 0.2);
+  }
+
+  .flex-container.center {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem 4rem;
+  }
+
+  .class-box {
+    background-color: white;
+    margin: 1rem .5rem;
+    width: 30%;
+  }
+
+  .class-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .class-box .caption-box {
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+
+  h2.center {
+    display: inline-block;
+    padding: 2rem 0 0 0;
+    text-align: center;
+    width: 100%;
+  }
 }
-
 
 /*Header & Nav Rules*/
 
@@ -116,10 +298,6 @@ header {
 a {
   text-decoration: none;
   color: rgba(105, 105, 105, 1);
-}
-
-.site-container {
-  margin: 0 1.5rem;
 }
 
 header .flex-container {
@@ -155,38 +333,19 @@ header .flex-container {
 
 /*Banner*/
 
-#banner {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.banner {
   background-color: rgba(60, 60, 60, 0.3);
-}
-
-/*Main*/
-
-#info {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: stretch;
 }
 
 /*Main Left*/
 
 #main {
   position: relative;
-  top: 2rem;
+  top: 4rem;
 }
 
 .left img {
   width: 100%;
-}
-
-.flex-container.left {
-  flex-direction: column;
-  float: left;
-  width: 60%;
-  padding: 2rem 0;
 }
 
 #quote {
@@ -195,44 +354,12 @@ header .flex-container {
 
 /*Main Right*/
 
-.flex-container.right {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  float: right;
-  width: 40%;
-  height: 100%;
-  padding: 2rem 0;
-  border-left: .5px solid rgba(60, 60, 60, 0.2);
-}
-
 #button {
   background-color: rgba(60, 60, 60, 0.8);
   color: rgba(255,255,255, 0.9);
   text-align: center;
   padding: .5rem 2.5rem;
-}
-
-.img-box {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  border-left: .5px solid rgba(60, 60, 60, 0.2);
-}
-
-.img-box img {
-  width: 35%;
-  height: 100%;
-  padding: 1rem;
-}
-
-#info .img-box img:first-child {
-  padding: 0 1rem 1rem 1rem;
-}
-
-.img-box.gray {
-  background-color: rgba(60, 60, 60, 0.2);
+  margin: 1.5rem 0;
 }
 
 .caption-box a {
@@ -241,24 +368,9 @@ header .flex-container {
 
 /*Courses*/
 
-#courses {
-  display: inline-block;
-  background-color: rgba(60, 60, 60, 0.2);
-}
-
-h2.center {
-  display: inline-block;
-  padding: 2rem 0 0 0;
-  text-align: center;
-  width: 100%;
-}
-
 .flex-container.center {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem 4rem;
 }
 
 .class-box {
@@ -266,18 +378,6 @@ h2.center {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: white;
-  margin: 1rem .5rem;
-  width: 30%;
-}
-
-.class-box img {
-  width: 100%;
-  height: auto;
-}
-
-.class-box .caption-box {
-  padding: 1rem 1rem 1.5rem 1rem;
 }
 
 .caption-box span {
@@ -304,11 +404,11 @@ footer {
   justify-content: space-between;
   width: 100%;
   height: 4rem;
-  text-size: .5rem;
 }
 
 footer span {
   font-size: .75rem;
+  vertical-align: middle;
 }
 
 footer span a {
