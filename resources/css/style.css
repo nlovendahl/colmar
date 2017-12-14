@@ -1,26 +1,11 @@
 /*General Rules & Fonts*/
 
-html {
-  font-family: 'Barlow', 'Arial', sans-serif;
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
   font-size: 16px;
   color: rgba(60, 60, 60, 0.9);
 }
 
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v5/HUuNgGR31mqIHE6zs0BlBgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v5/57TQ-anwthzkETEIO4jESAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
 
 @font-face {
   font-family: 'Roboto';
@@ -30,13 +15,6 @@ html {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOJBw1xU1rKptJj_0jans920.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
 
 @font-face {
   font-family: 'Barlow';
@@ -54,6 +32,22 @@ html {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 div {
   display: block;
 }
@@ -61,7 +55,7 @@ div {
 h1, h2, h3, span.bold {
   font-weight: 700;
   padding: .5rem 0;
-  line-height: 1.4;
+  line-height: 1.6;
   vertical-align: middle;
 }
 
@@ -88,6 +82,27 @@ video {
   height: 100%;
 }
 
+span {
+  font-family: "Barlow", "Arial", sans-serif;
+}
+
+/*Media Queries*/
+
+@media only screen and (min-width: 480px); {
+
+  .mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px); {
+
+ .flex-container.left, .flex-container.right {
+   width: 100%;
+ }
+}
+
+
 /*Header & Nav Rules*/
 
 header {
@@ -112,6 +127,7 @@ header .flex-container {
   justify-content: space-between;
   align-items: center;
   height: 4rem;
+  margin: 0 auto;
 }
 
 #nav {
@@ -147,11 +163,19 @@ header .flex-container {
   background-color: rgba(60, 60, 60, 0.3);
 }
 
+/*Main*/
+
+#info {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
 /*Main Left*/
 
 #main {
   position: relative;
-  top: 4rem;
+  top: 2rem;
 }
 
 .left img {
@@ -178,12 +202,13 @@ header .flex-container {
   float: right;
   width: 40%;
   height: 100%;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  border-left: .5px solid rgba(60, 60, 60, 0.2);
 }
 
 #button {
   background-color: rgba(60, 60, 60, 0.8);
-  color: white;
+  color: rgba(255,255,255, 0.9);
   text-align: center;
   padding: .5rem 2.5rem;
 }
@@ -193,13 +218,17 @@ header .flex-container {
   flex-direction: row;
   align-items: center;
   width: 100%;
-  border: .5px solid rgba(60, 60, 60, 0.2);
+  border-left: .5px solid rgba(60, 60, 60, 0.2);
 }
 
 .img-box img {
   width: 35%;
   height: 100%;
   padding: 1rem;
+}
+
+#info .img-box img:first-child {
+  padding: 0 1rem 1rem 1rem;
 }
 
 .img-box.gray {
@@ -248,7 +277,7 @@ h2.center {
 }
 
 .class-box .caption-box {
-  padding: 1rem 0 1.5rem 1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
 }
 
 .caption-box span {
@@ -259,4 +288,29 @@ h2.center {
 
 #thesis {
   display: inline-block;
+}
+
+#thesis .flex-container {
+  border: none;
+}
+
+/*Footer*/
+
+footer {
+  display: inline-flex;
+  position: relative;
+  top: 4rem;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 4rem;
+  text-size: .5rem;
+}
+
+footer span {
+  font-size: .75rem;
+}
+
+footer span a {
+  padding: 0 .5rem;
 }

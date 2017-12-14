@@ -8,8 +8,8 @@
   </head>
   <body>
 
-<!--Begin Header-->
-    <header>
+<!--Begin Desktop Header-->
+    <header class="desktop">
         <div class="site-container">
           <div class="flex-container">
             <div id="top-logo">
@@ -28,6 +28,16 @@
       </div>
     </header>
 
+<!--Begin Mobile Header-->
+    <div class="mobile">
+          <div class="flex-container">
+              <img src="./resources/images/ic-logo.svg" alt="colmar logo">
+              <img src="./resources/images/ic-on-campus.svg" alt="on-campus">
+              <img src="./resources/images/ic-online.svg" alt="online">
+              <img src="./resources/images/ic-login.svg" alt="login">
+          </div>
+    </div>
+
 <!--Begin Main-->
   <div id="main">
 <!--Begin Banner-->
@@ -40,6 +50,7 @@
         </div>
 
           <div class="flex-container right">
+            <div class="site-container">
         <h1>Learn something new everyday</h1>
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
              <div id="button">
@@ -47,6 +58,7 @@
              </div>
           </div>
         </div>
+      </div>
 
 
 <!--Begin Info-->
@@ -169,11 +181,13 @@
     <div class="flex-container left">
       <div class="site-container">
         <video src="./resources/videos/thesis.mp4" controls>
-        <p>Your browser is unable to show this content. Click <a href="#">here</a> to download it!</p>
+        </div>
+        <div class="site-container">
         <h3>Reimagine urban</h3>
         <p>"Curabitur vitae libero in ipsum consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficutur dolor consequat, tristique ligula."</p>
       </div>
     </div>
+
 
       <div class="flex-container right">
        <a href="#fisma">
@@ -205,14 +219,19 @@
 
 
 
+
 <!--Begin Footer-->
-  <footer>
-    <span>2016 Colmar Academy. All rights reserved</span>
-    <div id="footer-right">
-      <span><a href="#terms">Terms</a></span>
-      <span><a href="#privacy">Privacy</a></span>
+
+    <div class="site-container">
+      <footer>
+        <span>2016 Colmar Academy. All rights reserved</span>
+         <div id="footer-right">
+            <span><a href="#terms">Terms</a></span>
+            <span><a href="#privacy">Privacy</a></span>
+         </div>
+         </footer>
     </div>
-  </footer>
+
 
   </body>
 </html>
