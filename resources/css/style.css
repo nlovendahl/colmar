@@ -1,4 +1,9 @@
 /*General Rules & Fonts*/
+/*Hover colors:
+
+background-color: rgba(32, 178, 170, .5-1)
+color: rgba(255, 255, 255, 1)
+*/
 
 body {
   font-family: 'Montserrat', 'Arial', sans-serif;
@@ -158,7 +163,7 @@ nav li {
 
 #button:hover {
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(32, 178, 170, .4);
+  background-color: rgba(32, 178, 170, .5);
 }
 
 .caption-box a {
@@ -167,11 +172,11 @@ nav li {
 
 .img-box:hover, .img-box.gray:hover {
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(32, 178, 170, .4);
+  background-color: rgba(32, 178, 170, .5);
 }
 
 .class-box:hover {
-  background-color: rgba(60, 60, 60, 0.3);
+  background-color: rgba(32, 178, 170, .5);
 }
 
 /*Courses*/
@@ -240,7 +245,7 @@ footer span a {
   }
 
   header img:hover {
-    background-color: rgba(60, 60, 60, 0.3);
+    background-color: rgba(32, 178, 170, .5);
   }
 
   .banner .mobile {
@@ -307,6 +312,10 @@ footer span a {
     margin: .25rem 0;
   }
 
+  .class-box a {
+    width: 100%;
+  }
+
   .class-box img, .caption-box span, .caption-box p {
     display: none;
   }
@@ -351,7 +360,7 @@ footer span a {
 
   header nav li a:hover {
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(32, 178, 170, 1);
+    background-color: rgba(32, 178, 170, .8);
   }
 
   h1, h2, h3, span.bold {
@@ -445,7 +454,7 @@ footer span a {
 
   .class-box a:hover {
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(32, 178, 170, .4);
+    background-color: rgba(32, 178, 170, .5);
   }
 
   .class-box .caption-box {
