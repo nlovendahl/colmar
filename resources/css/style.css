@@ -171,12 +171,19 @@ nav li {
 }
 
 .img-box:hover, .img-box.gray:hover {
-  color: rgba(255, 255, 255, 1);
   background-color: rgba(32, 178, 170, .5);
+}
+
+.img-box a:hover {
+  color: rgba(255,255,255, 1);
 }
 
 .class-box:hover {
   background-color: rgba(32, 178, 170, .5);
+}
+
+.class-box span:hover {
+  color: rgba(255, 255, 255, 1);
 }
 
 /*Courses*/
@@ -460,14 +467,10 @@ footer span a {
     height: auto;
   }
 
-  .class-box a:hover {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(32, 178, 170, .5);
-  }
-
   .class-box .caption-box {
     height: 100%;
     padding: 1rem 1rem 1.5rem 1rem;
+    margin: 0 auto;
   }
 
   h2.center {
